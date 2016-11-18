@@ -1,0 +1,13 @@
+<launch>
+
+  <node pkg="atags" type="detector_node" name="atag_detector" ns="argus" output="screen">
+    <remap from="image" to="/elp/left/image_raw"/>
+    <rosparam>
+      enable_undistortion: false
+      enable_normalization: false
+      num_threads: 4
+      tag_family: 36h11
+    </rosparam>
+  </node>
+  
+</launch>
