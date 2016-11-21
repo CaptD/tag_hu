@@ -1,4 +1,0 @@
-# GetCameraInfo.srv
-# Retrieve the current parameters for the camera
----
-sensor_msgs/CameraInfo info

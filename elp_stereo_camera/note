@@ -1,2 +1,0 @@
-rosrun image_view stereo_view _approximate_sync:=True stereo:=elp image:=image_rect_color
-
