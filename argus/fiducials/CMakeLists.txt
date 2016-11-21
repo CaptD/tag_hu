@@ -14,7 +14,6 @@ find_package(catkin REQUIRED
 					geometry_msgs
 					argus_utils
 					lookup
-					camplex
 )
 
 # Use Boost for most utilities, threading
@@ -48,7 +47,6 @@ catkin_package(
 					geometry_msgs
 					argus_utils
 					lookup
-					camplex
 					
 	DEPENDS 		Boost 
 					system_lib
@@ -67,7 +65,6 @@ add_library( fiducials
 	src/FiducialCalibrationParsers.cpp
 	src/FiducialInfoManager.cpp
 	src/FiducialCommon.cpp
-	src/PoseEstimation.cpp
 )
 add_dependencies( fiducials ${fiducials_EXPORTED_TARGETS} )
 target_link_libraries( fiducials

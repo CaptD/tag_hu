@@ -167,7 +167,7 @@ Eigen::Matrix <double, 3, Eigen::Dynamic> MsgToMatrix( const std::vector <geomet
 	}
 	return mat;
 }
-
+/*
 bool UndistortDetections( const std::vector< argus_msgs::FiducialDetection >& detections,
                           const camplex::CameraCalibration& cameraModel,
                           bool undistort, bool normalize,
@@ -264,7 +264,7 @@ ProjectDetection( const Fiducial& fiducial,
 		
 	return true;
 }
-
+*/
 bool CheckDetectionROI( const argus_msgs::FiducialDetection& det, const cv::Rect& roi )
 {
 	BOOST_FOREACH( const argus_msgs::Point2D& point, det.points )

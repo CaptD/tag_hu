@@ -12,7 +12,6 @@
 
 #include "atags/AtagCommon.h"
 #include "argus_msgs/ImageFiducialDetections.h"
-#include "camplex/CameraCalibration.h"
 #include "fiducials/FiducialCommon.h"
 
 using namespace argus;
@@ -89,7 +88,7 @@ image_transport::CameraSubscriber cameraSub;
 void ImageCallback( const sensor_msgs::Image::ConstPtr& msg,
                     const sensor_msgs::CameraInfo::ConstPtr& info )
 {
-	camplex::CameraCalibration cameraModel( "camera", *info );
+	//camplex::CameraCalibration cameraModel( "camera", *info );
 	
 	// Detection occurs in grayscale
 	cv::Mat msgFrame = cv_bridge::toCvShare( msg )->image;
@@ -135,6 +134,7 @@ void ImageCallback( const sensor_msgs::Image::ConstPtr& msg,
 	rawPublisher.publish( detMsg );
 	
 	// Publish processed
+	/*
 	if( enableUndistortion || enableNormalization )
 	{
 		
@@ -148,6 +148,7 @@ void ImageCallback( const sensor_msgs::Image::ConstPtr& msg,
 		
 		processedPublisher.publish( detMsg );
 	}
+	*/
 }
 	
 };

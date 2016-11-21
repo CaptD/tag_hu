@@ -18,7 +18,6 @@ find_package(catkin REQUIRED
 					argus_utils
 					argus_msgs
 					fiducials
-					camplex
 )
 
 message( STATUS ${CATKIN_DEVEL_PREFIX} )
@@ -56,7 +55,6 @@ catkin_package(
 					argus_utils
 					argus_msgs
 					fiducials
-					camplex
 					
 	DEPENDS 		Boost 
 					system_lib

@@ -3,7 +3,6 @@
 #include <Eigen/Dense>
 #include <opencv2/core/core.hpp>
 
-#include "camplex/CameraCalibration.h"
 #include "argus_msgs/FiducialDetection.h"
 #include "argus_msgs/ImageFiducialDetections.h"
 
@@ -41,18 +40,20 @@ Eigen::Matrix <double, 3, Eigen::Dynamic> MsgToMatrix( const std::vector <geomet
 
 /*! \brief Undistort and normalize fiducial detections in-place. Assumes all detections
  * have the same undistortion/normalization status. */
+/*
 bool UndistortDetections( const std::vector <argus_msgs::FiducialDetection>& detections,
                           const camplex::CameraCalibration& cameraModel, 
                           bool undistort, bool normalize,
                           std::vector< argus_msgs::FiducialDetection >& undistorted );
-
+*/
 /*! \brief Simulates a fiducial detection. Ignores ROI constraints. Does not
  populate name field of detection. Returns success. */
+/*
 bool ProjectDetection( const Fiducial& fiducial,
                        const camplex::CameraCalibration& cameraModel,
                        const PoseSE3& fiducialToCam,
                        argus_msgs::FiducialDetection& detection );
-
+*/
 /*! \brief Returns whether the detected points are entirely in the ROI. */
 bool CheckDetectionROI( const argus_msgs::FiducialDetection& det, 
                         const cv::Rect& roi );
